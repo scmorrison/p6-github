@@ -1,0 +1,14 @@
+{
+  "perl"        : "6.*",
+  "name"        : "GitHub::Auth",
+  "version"     : "0.1.0",
+  "description" : "GitHub API OAuth authentication library",
+  "provides" : {
+      "GitHub::OAuth" : "lib/GitHub/OAuth.pm"
+  },
+  "depends"     : [ "HTTP::UserAgent", "HTTP::Request" ],
+  "source-url"  : "git://github.com/cnstechnicalgroup/perl6-github-auth.git",
+  "authors" : [
+      "Sam Morrison"
+  ]
+}
