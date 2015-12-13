@@ -19,8 +19,7 @@ GitHub::OAuth
 
     my $gh = GitHub::OAuth.new(
         auth_login => 'myusername',
-        auth_password => 'mypassword',
-        token_cache => '%*ENV<HOME>/.ghauth' # Default ~/.ghauth
+        auth_password => 'mypassword'
     );
 
     my $ghauth = $gho.create_authentication(data => {
