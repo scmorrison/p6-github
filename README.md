@@ -1,7 +1,7 @@
 NAME
 ====
 
-GitHub::OAuth
+GitHub
 
 DESCRIPTION
 ===========
@@ -11,13 +11,13 @@ Simple Perl6 GitHub API OAuth client.
 MODULES AND UTILITIES
 =====================
 
-GitHub::OAuth
+GitHub
 --------------
 
 ```perl6
-    use GitHub::OAuth;
+    use GitHub;
 
-    my $gh = GitHub::OAuth.new(
+    my $gh = GitHub.new(
         auth_login => 'myusername',
         auth_password => 'mypassword'
     );
@@ -29,6 +29,22 @@ GitHub::OAuth
 
     say $ghauth<token>;
 ```
+
+Installation
+============
+
+Install directly with "panda":
+
+    # From the source directory
+   
+    panda install .
+
+SEE ALSO
+========
+
+* https://github.com/fayland/perl6-WebService-GitHub
+* https://github.com/fayland/perl-net-github
+* https://github.com/plu/Pithub
 
 AUTHORS
 =======
