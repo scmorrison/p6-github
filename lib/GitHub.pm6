@@ -3,10 +3,12 @@ use v6;
 use GitHub::HTTP;
 
 class X::GitHub is Exception {
+  has $.status;
   has $.reason;
+
   method message()
   {
-    "Error : $.reason";
+    "Error: '$.status $.reason'";
   }
 }
 
