@@ -5,8 +5,7 @@
   "description" : "GitHub API OAuth authentication library",
   "provides" : {
       "GitHub" : "lib/GitHub.pm6",
-      "GitHub::HTTP" : "lib/GitHub/HTTP.pm6",
-      "GitHub::OAuth" : "lib/GitHub/OAuth.pm6"
+      "GitHub::HTTP" : "lib/GitHub/HTTP.pm6"
   },
   "depends"     : [ "HTTP::UserAgent", "HTTP::Request" ],
   "source-url"  : "git://github.com/cnstechnicalgroup/perl6-github.git",
