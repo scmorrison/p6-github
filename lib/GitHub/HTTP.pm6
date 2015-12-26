@@ -7,6 +7,7 @@ role GitHub::HTTP {
 
     has $.auth_login;
     has $.auth_password;
+    has $.auth_token;
     has $!github_api_uri = "https://api.github.com";
     has @!auth;
 

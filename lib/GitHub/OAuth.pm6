@@ -2,17 +2,7 @@ use v6;
 
 use GitHub::HTTP;
 
-class X::GitHub is Exception {
-  has $.status;
-  has $.reason;
-
-  method message()
-  {
-    "Error: '$.status $.reason'";
-  }
-}
-
-class GitHub:ver<v0.0.1>:auth<github:scmorrison> does GitHub::HTTP {
+class OAuth does GitHub::HTTP {
 
     # OAuth
     method authorizations() {
