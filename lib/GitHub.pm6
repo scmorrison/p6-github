@@ -15,8 +15,8 @@ class X::GitHub is Exception {
 class GitHub:ver<v0.0.1>:auth<github:scmorrison> does GitHub::HTTP {
 
     # OAuth
-    method authorizations(:$token) {
-        self.request('authorizations' ~ $token, 'GET');
+    method list_authorizations(:%data) {
+        self.request('authorizations', 'GET', :data(%data));
     }
 
     method get_authorization(:$token, :%data) {
@@ -43,4 +43,7 @@ class GitHub:ver<v0.0.1>:auth<github:scmorrison> does GitHub::HTTP {
         #self.request('applications/' ~ $client_id ~ '/' ~ $access_token, 'POST', :data(%data));
     }
 
+    method list_issues(:$repo, :%data) {
+        self.request('repos/' ~ $repo ~ '/issues', 'GET', :data(%data));
+    }
 }
