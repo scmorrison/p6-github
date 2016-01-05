@@ -35,13 +35,7 @@ role GitHub::HTTP {
         my $auth_uri = "$!github_api_uri/$path";
 				my $req;
 
-        # POST
-				if $method ~~ 'POST' {
-		      $req = HTTP::Request.new(POST => URI.new($auth_uri));
-				} elsif $method ~~ 'GET' {
-		      $req = HTTP::Request.new(GET => URI.new($auth_uri));
-				}
-
+		    $req = HTTP::Request.new(|($method  => URI.new($auth_uri)));
 	  	  $req.header.field(User-Agent => %data<note>);
     		$req.header.field(Accept => 'application/vnd.github.v3+json');
 
